@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookNest - Sign In</title>
+    <link rel="stylesheet" href="signIn.css">
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="signIn.html">
+                    <img src=".assets/OIG4.jpeg" alt="BookNest Logo">
+                </a>
+                <span class="brand-name">BookNest</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#">Catalog</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+                <li><a href="#">Search</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <form class="login-form" onsubmit="return false">
+            <h2>Login to Your Account</h2>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <a href="forgotPassword.html" class="forgot-password"> Forgot Password?</a>
+            </div>
+            <button onclick="signIn()">Sign In</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="bottom-bar">
+            <p>Not Reading? <a href="signUp.html" class="create-account-btn">Create an Account Now!</a></p>
+        </div>
+        <div class="copyright">
+            <p>&copy; Ended!</p>
+        </div>
+    </footer>
+
+    <script>
+        async function signIn() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            const userData = {
+                username: username,
+                password: password
+            };
+
+            try {
+                const response = await fetch('http://localhost:3000/users/signin', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(userData)
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    alert("Signin successful!");
+                    // Redirect the user to another page after successful signin
+                    window.location.href = 'home.html';
+                } else {
+                    const errorData = await response.json();
+                    alert("Error: " + errorData.error);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert("An error occurred. Please try again later.");
+            }
+        }
+    </script>
+</body>
+
+</html>

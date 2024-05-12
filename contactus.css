@@ -1,0 +1,246 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica, sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+/* Navbar Styles */
+nav {
+    background-color: rgb(24, 26, 33);
+    padding: 35px 35px; /* Increased padding for the nav bar */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo img {
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Main Container Styles */
+.container {
+    width: 100%; /* Adjusted to take full width */
+    max-width: 1200px; /* Added for responsiveness */
+    background: #fff;
+    border-radius: 6px;
+    padding: 20px 60px 30px 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    margin: 200px auto 0; /* Adjusted margin to center and move downward */
+    position: relative; /* Added for positioning */
+}
+
+.container .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .content .left-side {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    position: relative;
+}
+
+.content .left-side::before {
+    content: '';
+    position: absolute;
+    height: 70%;
+    width: 2px;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #afafb6;
+}
+
+.content .left-side .details {
+    margin: 14px;
+    text-align: center;
+}
+
+.content .left-side .details i {
+    font-size: 30px;
+    color: #3e2093;
+    margin-bottom: 10px;
+}
+
+.content .left-side .details .topic {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.content .left-side .details .text-one,
+.content .left-side .details .text-two {
+    font-size: 14px;
+    color: #afafb6;
+}
+
+.container .content .right-side {
+    width: 75%;
+    margin-left: 75px;
+}
+
+.content .right-side .topic-text {
+    font-size: 23px;
+    font-weight: 600;
+    color: #3e2093;
+}
+
+.right-side .input-box {
+    height: 50px;
+    width: 100%;
+    margin: 12px 0;
+}
+
+.right-side .input-box input,
+.right-side .input-box textarea {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #f0f1f8;
+    border-radius: 6px;
+    padding: 0 15px;
+    resize: none;
+}
+
+.right-side .message-box {
+    min-height: 110px;
+}
+
+.right-side .input-box textarea {
+    padding-top: 6px;
+}
+
+.right-side .button {
+    display: inline-block;
+    margin-top: 12px;
+}
+
+.right-side .button input[type="button"] {
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: #3e2093;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input[type="button"]:hover {
+    background: #5029bc;
+}
+
+@media (max-width: 950px) {
+    .container {
+        width: 90%;
+        padding: 30px 40px 40px 35px;
+    }
+
+    .container .content .right-side {
+        width: 75%;
+        margin-left: 55px;
+    }
+}
+
+@media (max-width: 820px) {
+    .container {
+        margin: 200px auto; /* Adjusted margin for centering and moving downward */
+        height: 100%;
+    }
+
+    .container .content {
+        flex-direction: column-reverse;
+    }
+
+    .container .content .left-side {
+        width: 100%;
+        flex-direction: row;
+        margin-top: 40px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .container .content .left-side::before {
+        display: none;
+    }
+
+    .container .content .right-side {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px; /* Increased margin top */
+}
+
+.icon {
+    display: inline-block;
+    margin-right: 30px; /* Increased space between icons */
+    color: #3e2093; /* Adjust the color as needed */
+    font-size: 24px;
+}
+
+.icon:last-child {
+    margin-right: 0; /* Remove right margin from the last icon */
+}
+
+.icon:hover {
+    color: #5029bc; /* Adjust the hover color as needed */
+}

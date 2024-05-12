@@ -1,0 +1,119 @@
+body {
+    font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica, sans-serif;
+    background-color: rgb(5, 5, 5); /* Set background color to cover the full page */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    height: 750px;
+    margin-top: 0px;
+}
+
+header {
+    background-color: rgb(24, 26, 33);
+    padding: 25px 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 65px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica, sans-serif;
+    color: #fffefe;
+    font-weight: bold;
+}
+
+.nav-links {
+    font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #dcdedf;
+    font-size: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+/* Additional CSS */
+#catalog {
+    margin-top: 50px; /* Adjust the top margin to move the catalog section down */
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px;
+    color: white;
+    margin-top: 50px;
+}
+
+.about-text {
+    width: 60%; /* Adjusted width */
+    text-align: left;
+}
+
+.about-image {
+    width: 30%; /* Adjusted width */
+    margin-left: 10px; /* Adjusted margin */
+}
+
+
+.container {
+    padding: 0 16px;
+}
+
+.title {
+    color: grey;
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+    /* Adjust the width and display properties for elements with class .column */
+    .column {
+        width: 100%;
+        display: block;
+    }
+}
