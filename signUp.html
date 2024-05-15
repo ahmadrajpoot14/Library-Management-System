@@ -7,24 +7,23 @@
   <title>Sign Up - BookNest</title>
   <link rel="stylesheet" href="signUp.css" />
 </head>
-<header>
-  <nav>
-      <div class="logo">
-          <a href="signIn.html">
-              <img src=".assets/OIG4.jpeg" alt="BookNest Logo">
-          </a>
-          <span class="brand-name">BookNest</span>
-      </div>
-      <ul class="nav-links">
-          <li><a href="home.html">Home</a></li>
-          <li><a href="#">Catalog</a></li>
-          <li><a href="contactus.html">Contact</a></li>
-          <li><a href="#">Search</a></li>
-      </ul>
-  </nav>
-</header>
 
 <body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="signIn.html">
+          <img src=".assets/OIG4.jpeg" alt="BookNest Logo">
+        </a>
+        <span class="brand-name">BookNest</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="home2.html">Home</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <div class="container">
     <form id="signup-form" class="login-form">
       <h2>Create Your Account</h2>
@@ -55,52 +54,52 @@
   <script>
     function signUp() {
       const username = document.getElementById('username').value;
-      const displayName = document.getElementById('display_name').value; // Get display name
+      const displayName = document.getElementById('display_name').value;
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
       const confirmPassword = document.getElementById('confirm_password').value;
-  
+
       if (password !== confirmPassword) {
         alert("Passwords do not match");
         return;
       }
-  
+
       const formData = {
         username: username,
-        displayName: displayName, // Include display name in form data
+        displayName: displayName,
         email: email,
         password: password
       };
-  
-      console.log('Form Data:', formData); // Log the form data
-  
+
+      console.log('Form Data:', formData);
+
       fetch('http://localhost:3000/users', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      })
-      .then(response => {
-        if (response.ok) {
-          console.log('User signed up successfully');
-          window.location.href = 'home.html';
-        } else {
-          console.error('Failed to sign up:', response.statusText);
-        }
-      })
-      .catch(error => {
-        console.error('Error signing up:', error);
-      });
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        })
+        .then(response => {
+          if (response.ok) {
+            console.log('User signed up successfully');
+            window.location.href = 'home3.html'; // Redirect to home3.html
+          } else {
+            console.error('Failed to sign up:', response.statusText);
+          }
+        })
+        .catch(error => {
+          console.error('Error signing up:', error);
+        });
     }
-  
+
     // Add event listener to form submission
-    document.getElementById('signup-form').addEventListener('submit', function (event) {
+    document.getElementById('signup-form').addEventListener('submit', function(event) {
       event.preventDefault(); // Prevent default form submission
       signUp(); // Call signUp() function when the form is submitted
     });
   </script>
-  
+
 </body>
 
 </html>
