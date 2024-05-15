@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to BookNest</title>
     <link rel="stylesheet" href="home.css">
-    <style>
-        /* Additional CSS */
-        #catalog {
-            margin-top: 50px; /* Adjust the top margin to move the catalog section down */
-        }
-    </style>
+    <link rel="stylesheet" href="navbar.css"> <!-- Include navbar CSS -->
+
 </head>
+
 <body>
     <header>
         <nav>
@@ -23,32 +21,57 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#catalog">Catalog</a></li>
+                <li><a href="Catalog.html">Catalog</a></li>
                 <li><a href="contactus.html">Contact Us</a></li>
-                <li><a href="#search">Search</a></li>
-                <li><a href="signIn.html">Log In</a></li>
-                <li><a href="signUp.html">Sign Up</a></li>
+                <li class="profile-button" id="profileBtn" style="display: none;">
+                    <img src=".assets/images.png" alt="Profile Picture">
+                    <span id="username"></span>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <div class="dropdown-item" id="logoutBtn">Logout</div>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section id="home" class="welcome-section">
-            <h3><span class="welcome-to">Welcome to</span></h3>
             <h1><span class="brand-name1">BookNest</span></h1>
-            <p class="welcome-message">Dive into a world of knowledge at our library, where every page holds a gateway to endless adventures and discoveries.Let your imagination soar at BookNest!</p>
+            <p class="welcome-message">BookNest, with its serene ambiance and shelves laden with literary treasures, stands as a sanctuary for bibliophiles and seekers of knowledge alike. Nestled in the heart of the city, it beckons visitors with the promise of exploration and discovery. The library exudes an air of tranquility, where the rustle of pages and the occasional murmur of readers create a symphony of intellect. Every corner holds a story waiting to be unraveled, every aisle a new adventure waiting to be embarked upon. From timeless classics to contemporary bestsellers, BookNest's collection caters to diverse tastes and interests, fostering a sense of unity through the shared love of literature.</p>
         </section>
 
         <!-- Catalog Section -->
-        
+
     </main>
+    
+    
+    <div class="button-container">
+        <button class="about-us-button">About Us</button>
+    </div>
 
-    <footer>
-        <div class="button-container">
-            <a href="aboutus.html" class="about-us-button">About Us</a>
-        </div>
-    </footer>
+    <script>
+        // Check if user is logged in and display profile button
+        const loggedInUser = localStorage.getItem('loggedInUser');
+        if (loggedInUser) {
+            const profileBtn = document.getElementById('profileBtn');
+            const usernameSpan = document.getElementById('username');
+            usernameSpan.textContent = loggedInUser;
+            profileBtn.style.display = 'flex';
+        }
 
+        // Toggle dropdown menu
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        profileBtn.addEventListener('click', function() {
+            dropdownMenu.classList.toggle('show');
+        });
+
+        // Logout functionality
+        const logoutBtn = document.getElementById('logoutBtn');
+        logoutBtn.addEventListener('click', function() {
+            localStorage.removeItem('loggedInUser');
+            window.location.href = 'home2.html'; // Redirect to home2.html after logout
+        });
+    </script>
 </body>
-</html>
 
+</html>
