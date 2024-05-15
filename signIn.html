@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookNest - Sign In</title>
     <link rel="stylesheet" href="signIn.css">
+    <link rel="stylesheet" href="navbar.css"> <!-- Include navbar CSS -->
     <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 </head>
 
@@ -20,9 +21,7 @@
             </div>
             <ul class="nav-links">
                 <li><a href="home.html">Home</a></li>
-                <li><a href="#">Catalog</a></li>
                 <li><a href="contactus.html">Contact</a></li>
-                <li><a href="#">Search</a></li>
             </ul>
         </nav>
     </header>
@@ -73,8 +72,8 @@
 
                 if (response.ok) {
                     const data = await response.json();
+                    localStorage.setItem('loggedInUser', username); // Save username to local storage
                     alert("Signin successful!");
-                    // Redirect the user to another page after successful signin
                     window.location.href = 'home.html';
                 } else {
                     const errorData = await response.json();
