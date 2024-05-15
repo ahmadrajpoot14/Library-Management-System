@@ -1,0 +1,156 @@
+/* Catalog Section Styles */
+body {
+    font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica, sans-serif;
+    background-image: url(.assets/Gemini_Generated_Image_6ejlju6ejlju6ejl.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    min-height: 100vh;
+}
+
+header {
+    background-color: rgb(24, 26, 33);
+    padding: 25px 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 65px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica, sans-serif;
+    color: #fffefe;
+    font-weight: bold;
+}
+
+.nav-links {
+    font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #dcdedf;
+    font-size: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.catalog {
+  margin-top: 100px;
+}
+
+.catalog h2 {
+  text-align: center;
+  color: wheat;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-search {  /* Assuming this targets the search section */
+    text-align: center;  /* Adjust if needed */
+  }
+  
+  .form-search input[type="text"] {  /* Assuming this targets the search input field */
+    color: grey;  /* Set text color to black */
+  }
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.book-card {
+  background-color: green;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 10px;
+  text-align: center;
+  width: calc(15% - 10px); /* Adjust card width based on desired layout */
+  transition: all 0.2s ease-in-out;
+  font-family: 'Open Sans', sans-serif;
+  flex-basis: auto;
+}
+
+.book-card:hover {
+  transform: scale(1.02); /* Add subtle hover effect */
+}
+
+.book-card img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+  flex-basis: auto;
+  border-radius: 5px;
+}
+
+.book-card h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.book-card p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.availability {
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.availability.available {
+  background-color: #4CAF50;
+}
+
+.availability.on-loan {
+  background-color: #f44336;
+}
+
+/* Media Queries (optional) */
+@media (max-width: 768px) {
+  /* Adjust styles for smaller screens (tablets) */
+  .book-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  /* Adjust styles for mobile phones */
+  .book-card {
+    width: 100%;
+  }
+}
