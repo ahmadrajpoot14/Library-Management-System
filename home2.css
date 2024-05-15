@@ -1,0 +1,189 @@
+body {
+    font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica, sans-serif;
+    background-image: url(.assets/6.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    height: 750px;
+    margin-top: 0px;
+}
+
+header {
+    background-color: rgb(24, 26, 33);
+    padding: 25px 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 65px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica, sans-serif;
+    color: #fffefe;
+    font-weight: bold;
+}
+
+.nav-links {
+    font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #dcdedf;
+    font-size: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+/* Additional CSS */
+#catalog {
+    margin-top: 50px; /* Adjust the top margin to move the catalog section down */
+}
+
+/* Align profile button and adjust font size */
+.profile-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 16px; /* Adjust font size */
+    font-weight: bold; /* Adjust font weight */
+    text-decoration: none; /* Remove underline */
+}
+
+.profile-button img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 100;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    color: black; /* Set the color to black */
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+.welcome-section {
+    text-align: center;
+    margin-top: 120px;
+}
+
+.welcome-to {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 30px;
+    color: #ffffff;
+    margin-top: 50px;
+    margin-left: 0px
+}
+
+.welcome-section h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.brand-name1 {
+    font-weight: bold;
+    color: #fff700;
+    margin-left: 0px;
+}
+
+.welcome-message {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #ffffff;
+    line-height: 1.5;
+    margin-left: 100px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.about-us-button {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.about-us-button:hover {
+    background-color: #959c2a;
+    color: #fff;
+}
+
+/* Button Styles */
+.log-in-button,
+.sign-up-button {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: 20px; /* Adjust spacing between buttons */
+}
+
+.log-in-button:hover,
+.sign-up-button:hover {
+    background-color: #959c2a;
+    color: #0e0d0d;
+}
+
