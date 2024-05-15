@@ -1,6 +1,6 @@
 body {
     font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica, sans-serif;
-    background-image: url(.assets/6.png);
+    background-image: url(.assets/homei.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -13,6 +13,16 @@ body {
 header {
     background-color: rgb(24, 26, 33);
     padding: 25px 0;
+    animation: fadeIn 1s ease; /* Add animation for header */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 nav {
@@ -41,6 +51,14 @@ nav {
     font-weight: bold;
 }
 
+.brand-name1 {
+    font-size: 72px; /* Increase font size */
+    font-weight: bold;
+    color: #fff700;
+    margin-left: 0px;
+    animation: fadeIn 1s ease; /* Add animation for BookNest */
+}
+
 .nav-links {
     font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica, sans-serif;
     text-transform: uppercase;
@@ -62,46 +80,93 @@ nav {
     text-decoration: none;
 }
 
-.welcome-section {
-    text-align: center;
-    margin-top: 120px;
-}
-
-.welcome-to {
-    font-family: 'Arial Black', sans-serif;
-    font-size: 30px;
-    color: #ffffff;
-    margin-top: 50px;
-    margin-left: 0px
-}
-
-.welcome-section h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 60px;
-    color: #ffffff;
-    margin-top: 10px;
-}
-
-.brand-name1 {
+/* Additional CSS */
+.profile-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 16px;
     font-weight: bold;
-    color: #fff700;
-    margin-left: 0px;
+    text-decoration: none;
 }
 
-.welcome-message {
-    font-size: 18px;
-    margin-top: 10px;
-    color: #ffffff;
-    line-height: 1.5;
-    margin-left: 100px;
+.profile-button img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
 }
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 100;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+.welcome-section {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    margin-top: 120px;
+    padding: 0 100px; /* Add padding to create space */
+}
+
+.welcome-section h1,
+.welcome-message {
+    font-size: 18px; /* Adjust font size as needed */
+    color: #ffffff;
+    margin: 0; /* Remove default margins */
+    text-align: left; /* Align text to the left */
+    max-width: 600px; /* Limit width for better readability */
+    animation: fadeIn 1s ease; /* Add animation */
+}
+
+/* Define the fadeIn animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+        opacity: 1; /* End with opacity 1 */
+    }
+}
+
+
 
 .button-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Align items to the left and right */
     margin-top: 10px;
+    padding: 0 100px; /* Add padding to create space */
 }
 
+.about-us-paragraph {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+/* Add animation to .about-us-button */
 .about-us-button {
     background-color: transparent;
     color: #ffffff;
@@ -111,6 +176,17 @@ nav {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    animation: fadeIn 1s ease; /* Add animation */
+}
+
+/* Define the fadeIn animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+        opacity: 1; /* End with opacity 1 */
+    }
 }
 
 .about-us-button:hover {
@@ -118,23 +194,4 @@ nav {
     color: #fff;
 }
 
-/* Button Styles */
-.log-in-button,
-.sign-up-button {
-    background-color: transparent;
-    color: #ffffff;
-    border: 2px solid #ffffff;
-    padding: 10px 20px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    margin-left: 20px; /* Adjust spacing between buttons */
-}
-
-.log-in-button:hover,
-.sign-up-button:hover {
-    background-color: #959c2a;
-    color: #0e0d0d;
-}
 
