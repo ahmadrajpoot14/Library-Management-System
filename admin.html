@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - BookNest</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="signIn.html">
+                    <img src=".assets/OIG4.jpeg" alt="BookNest Logo">
+                </a>
+                <span class="brand-name">BookNest</span>
+            </div>
+            <ul class="nav-links">
+                <li><button id="dashboardBtn">Dashboard</button></li>
+                <li><button id="aboutBtn" onclick="openAboutPage()">About</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Welcome message section -->
+    <section class="welcome-section">
+        <h1 class="welcome-message">Welcome to BookNest Admin Panel</h1>
+    </section>
+
+    <!-- Other content of admin panel goes here -->
+
+    <script>
+        function openAboutPage() {
+            window.location.href = "aboutus.html"; // Redirect to about.html
+        }
+    </script>
+</body>
+</html>
