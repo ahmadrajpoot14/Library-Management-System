@@ -1,0 +1,146 @@
+header {
+    background-color: rgb(24, 26, 33);
+    padding: 25px 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 65px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica, sans-serif;
+    color: #fffefe;
+    font-weight: bold;
+}
+
+.nav-links {
+    font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #dcdedf;
+    font-size: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.book-card:hover {
+    transform: scale(1.05);
+}
+
+.book-card img {
+    width: 150px;
+    border-radius: 5px;
+}
+
+.book-card h2, .book-card p {
+    color: #333;
+    margin: 5px 0;
+    text-align: center;
+}
+
+.book-card button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745; /* Green button color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.book-card button:hover{
+    background-color: #218838; /* Darker green on hover */
+}
+
+.red-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.red-button:hover{
+    background-color: darkred;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.about-us-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff; /* Blue button color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.about-us-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
